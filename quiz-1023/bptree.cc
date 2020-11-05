@@ -92,8 +92,6 @@ insert_in_leaf(NODE *leaf, int key, DATA *data)
     for(i = 0; i < leaf->nkey; i++) {
       if(key < leaf->key[i]) break;
     }
-
-    printf("%d\n", i);
     for(int j = leaf->nkey; j > i; j--) {
 			leaf->chi[j] = leaf->chi[j-1];
 			leaf->key[j] = leaf->key[j-1];

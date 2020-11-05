@@ -1,0 +1,75 @@
+\documentclass[a4j]{jarticle}
+\title{Binary Search}
+\author{環境情報学部1年 72040305 飯田 圭祐}
+
+\usepackage{url}
+\usepackage{listings}
+
+\lstset{
+  commentstyle=\textit,
+  basicstyle={\ttfamily\small}, %書体の指定
+  frame=single, %フレームの指定
+  framesep=5pt, %フレームと中身（コード）の間隔
+  breaklines=true, %行が長くなった場合の改行
+  linewidth=15cm, %フレームの横幅
+  lineskip=-0.5ex, %行間の調整
+  tabsize=2, %Tabを何文字幅にするかの指定
+  keywordstyle = \bfseries,
+  showstringspaces=false,
+  stepnumber=1,
+}
+
+\begin{document}
+
+\begin{flushright}
+環境情報学部 72040305 飯田 圭祐
+\end{flushright}
+
+\section{B+ Tree}
+source: \url{https://github.com/k-mrm/se2020/tree/master/quiz-1023}
+\subsection{ソースコード}
+  \begin{lstlisting}[language=c, caption=insert\_in\_leaf]
+NODE *
+insert_in_leaf(NODE *leaf, int key, DATA *data)
+{
+	int i;
+	if (key < leaf->key[0]) {
+		for (i = leaf->nkey; i > 0; i--) {
+			leaf->chi[i] = leaf->chi[i-1] ;
+			leaf->key[i] = leaf->key[i-1] ;
+		} 
+		leaf->key[0] = key;
+		leaf->chi[0] = (NODE *)data;
+	}
+	else { // Quiz
+    // Step 2. Insert the new key
+    for(i = 0; i < leaf->nkey; i++) {
+      if(key < leaf->key[i]) break;
+    }
+    for(int j = leaf->nkey; j > i; j--) {
+			leaf->chi[j] = leaf->chi[j-1];
+			leaf->key[j] = leaf->key[j-1];
+    }
+    leaf->key[i] = key;
+    leaf->chi[i] = (NODE *)data;
+	}
+
+  leaf->nkey++;
+
+	return leaf;
+}
+  \end{lstlisting}
+\subsection{説明}
+$\texttt{key < leaf->key[i]}$となる\texttt{i}を見つけ，\texttt{i}より右にあるデータを右にシフトし，iにデータを挿入する．
+\subsection{実行結果}
+実行結果はListing \ref{l}の通りになった．
+  \begin{lstlisting}[caption=実行結果, label=l]
+Key: 4999 
+[4999]
+Key: 200
+[200 4999]
+Key: 1000 
+[200 1000 4999]
+  \end{lstlisting}
+
+\end{document}

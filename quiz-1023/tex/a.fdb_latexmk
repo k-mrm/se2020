@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1602832254 "a.dvi" "a.pdf" "a" 1602832255
-  "a.dvi" 1602832254 6504 8f6430a0a18df7b7818c3f3beff6a837 "latex"
+["dvipdf"] 1604574548 "a.dvi" "a.pdf" "a" 1604574548
+  "a.dvi" 1604574548 6376 f254718870a342e15521d8f87c5a2233 "latex"
   (generated)
   "a.pdf"
-["latex"] 1602832254 "a.ltx" "a.dvi" "a" 1602832255
+["latex"] 1604574548 "a.ltx" "a.dvi" "a" 1604574548
   "/etc/texmf/web2c/texmf.cnf" 1588754851 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1463434352 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
@@ -15,6 +15,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1463434352 856 39c171483fe1bb7d0e1368980c0c205b ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin9.tfm" 1463434352 856 b22b8128b44bf8881977f2c74b361f47 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmitt10.tfm" 1136768653 768 2297ad2ac26f37e67f756dad27c77d68 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty" 1580683321 2590 e3b24ff953e5b58d924f163d25380312 ""
@@ -29,8 +30,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/web2c/eptex/platex.fmt" 1588755107 7265967 8a4ea0812654b2b5e61cf411fdfe878f ""
-  "a.aux" 1602832254 527 31a6a16bbd47c23b251a3e74b23ff906 "latex"
-  "a.ltx" 1602832253 1968 0d1c38a8d1030364eace2338eaa08275 ""
+  "a.aux" 1604574548 637 aaa97089361a42d8243525f24c22288d "latex"
+  "a.ltx" 1604574546 1895 567a45308b24784ba4971c3a84e7689c ""
   (generated)
   "a.aux"
   "a.dvi"
