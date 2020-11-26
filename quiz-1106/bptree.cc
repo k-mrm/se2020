@@ -317,12 +317,6 @@ insert(int key, DATA *data)
 }
 
 void
-init_root(void)
-{
-	Root = NULL;
-}
-
-void
 search_core(const int key)
 {
   NODE *n = find_leaf(Root, key);
@@ -347,11 +341,49 @@ interactive()
 int
 main(int argc, char *argv[])
 {
-	init_root();
+  if(argc != 2) {
+    puts("arg error");
+    return 1;
+  }
+  int test = argv[1][0] - '0';
 
-  while (true){
-		insert(interactive(), NULL);
-    print_tree(Root);
+  switch(test) {
+    case 1:
+      for(int i = 1; i <= 4; i++) {
+        insert(i, NULL);
+      }
+      print_tree(Root);
+      return 0;
+    case 2:
+      for(int i = 1; i <= 8; i++) {
+        insert(i, NULL);
+      }
+      print_tree(Root);
+      return 0;
+    case 3:
+      for(int i = 1; i <= 10; i++) {
+        insert(i, NULL);
+      }
+      print_tree(Root);
+      return 0;
+    case 4:
+      for(int i = 1; i <= 1000000; i++) {
+        insert(i, NULL);
+      }
+      while(true) {
+        search_core(interactive());
+      }
+      return 0;
+    case 5:
+      for(int i = 1000000; i >= 1; i--) {
+        insert(i, NULL);
+      }
+      while(true) {
+        search_core(interactive());
+      }
+      return 0;
+    case 6:
+      break;
   }
 
 	return 0;

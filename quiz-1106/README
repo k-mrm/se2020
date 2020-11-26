@@ -1,0 +1,7 @@
+# build
+$ make
+
+# run
+./bptree <test-number>
+
+ex: ./bptree 1
