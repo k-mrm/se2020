@@ -1,0 +1,112 @@
+g++ -g -c -Wall -O0 kr.cc
+kr.cc: 関数 ‘bool validation(const LOCAL_DB*, int, int)’ 内:
+kr.cc:19:27: エラー: no match for ‘operator==’ (operand types are ‘OBJ’ {aka ‘_OBJ’} and ‘const OBJ’ {aka ‘const _OBJ’})
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/local/include/c++/8.2.0/bits/stl_algobase.h:64,
+                 from /usr/local/include/c++/8.2.0/list:60,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/stl_pair.h:443:5: 備考: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)’
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/stl_pair.h:443:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::pair<_T1, _T2>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+In file included from /usr/local/include/c++/8.2.0/bits/stl_algobase.h:67,
+                 from /usr/local/include/c++/8.2.0/list:60,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/stl_iterator.h:299:5: 備考: candidate: ‘template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)’
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/stl_iterator.h:299:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::reverse_iterator<_Iterator>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+In file included from /usr/local/include/c++/8.2.0/bits/stl_algobase.h:67,
+                 from /usr/local/include/c++/8.2.0/list:60,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/stl_iterator.h:337:5: 備考: candidate: ‘template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)’
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/stl_iterator.h:337:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::reverse_iterator<_Iterator>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+In file included from /usr/local/include/c++/8.2.0/bits/stl_algobase.h:67,
+                 from /usr/local/include/c++/8.2.0/list:60,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/stl_iterator.h:1112:5: 備考: candidate: ‘template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)’
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/stl_iterator.h:1112:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::move_iterator<_IteratorL>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+In file included from /usr/local/include/c++/8.2.0/bits/stl_algobase.h:67,
+                 from /usr/local/include/c++/8.2.0/list:60,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/stl_iterator.h:1118:5: 備考: candidate: ‘template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)’
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/stl_iterator.h:1118:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::move_iterator<_IteratorL>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+In file included from /usr/local/include/c++/8.2.0/list:61,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/allocator.h:146:5: 備考: candidate: ‘template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_T2>&)’
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/allocator.h:146:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::allocator<_Tp1>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+In file included from /usr/local/include/c++/8.2.0/list:61,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/allocator.h:152:5: 備考: candidate: ‘template<class _Tp> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)’
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/allocator.h:152:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::allocator<_Tp1>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+In file included from /usr/local/include/c++/8.2.0/list:63,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/stl_list.h:344:5: 備考: candidate: ‘template<class _Val> bool std::operator==(const std::_List_iterator<_Tp>&, const std::_List_const_iterator<_Tp>&)’
+     operator==(const _List_iterator<_Val>& __x,
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/stl_list.h:344:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::_List_iterator<_Tp>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+In file included from /usr/local/include/c++/8.2.0/list:63,
+                 from kr.h:7,
+                 from kr.cc:1:
+/usr/local/include/c++/8.2.0/bits/stl_list.h:1986:5: 備考: candidate: ‘template<class _Tp, class _Alloc> bool std::operator==(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)’
+     operator==(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+/usr/local/include/c++/8.2.0/bits/stl_list.h:1986:5: 備考:   template argument deduction/substitution failed:
+kr.cc:19:46: 備考:   ‘OBJ’ {aka ‘_OBJ’} is not derived from ‘const std::__cxx11::list<_Tp, _Alloc>’
+         if( xitr->ws[wid] == local_db[curid].obj) { // Potentially Conflict
+                                              ^~~
+kr.cc: 関数 ‘void transaction(int)’ 内:
+kr.cc:82:33: エラー: no match for ‘operator=’ (operand types are ‘OBJ’ {aka ‘_OBJ’} and ‘int’)
+       me.ws[wid] = oidList[curid];
+                                 ^
+In file included from kr.cc:1:
+kr.h:13:16: 備考: candidate: ‘constexpr _OBJ& _OBJ::operator=(const _OBJ&)’
+ typedef struct _OBJ {
+                ^~~~
+kr.h:13:16: 備考:   no known conversion for argument 1 from ‘int’ to ‘const _OBJ&’
+kr.h:13:16: 備考: candidate: ‘constexpr _OBJ& _OBJ::operator=(_OBJ&&)’
+kr.h:13:16: 備考:   no known conversion for argument 1 from ‘int’ to ‘_OBJ&&’
+make: *** [kr.o] エラー 1
